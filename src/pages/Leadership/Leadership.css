@@ -1,0 +1,535 @@
+/* Import the common responsive styles */
+@import url('../../common/responsive.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #5829bb;
+  --secondary: #ff6b6b;
+  --accent1: #33d9b2;
+  --accent2: #ffb142;
+  --accent3: #ea4c89;
+  --dark: #2c3e50;
+  --light: #f9f9f9;
+  --gradient1: linear-gradient(135deg, var(--primary), #8e44ad);
+  --gradient2: linear-gradient(135deg, var(--secondary), #ff9a9e);
+  --gradient3: linear-gradient(135deg, var(--accent1), #00c9a7);
+  --gradient4: linear-gradient(135deg, var(--accent2), #ffd166);
+  --gradient5: linear-gradient(135deg, var(--accent3), #f67280);
+}
+
+/* Basic reset */
+.leadership-page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #fff, #f8fafb);
+}
+
+/* Header section with gradient background */
+.leadership-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a192f, #172a46);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle pattern to the header */
+.leadership-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Adding hero banner styles */
+.leadership-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.leadership-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.leadership-header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: white;
+  z-index: 5;
+}
+
+/* Modify the existing header styles */
+.leadership-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  letter-spacing: -0.9px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.leadership-main-title span {
+  color: #ff0066;
+}
+
+.leadership-intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Profiles container */
+.leadership-profiles-container {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+/* Profile image */
+.leadership-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  order: 1;
+  padding: 20px;
+}
+
+.leadership-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+/* Individual profile with enhanced styling */
+.leadership-profile {
+  display: flex;
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.leadership-profile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Add colorful accent border to each profile */
+.leadership-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ff0066, #6600ff);
+}
+
+.leadership-profile:nth-child(3n+1)::before {
+  background: linear-gradient(to right, #ff0066, #ff9a9e);
+}
+
+.leadership-profile:nth-child(3n+2)::before {
+  background: linear-gradient(to right, #4A3AFF, #8e44ad);
+}
+
+.leadership-profile:nth-child(3n+3)::before {
+  background: linear-gradient(to right, #33d9b2, #00c9a7);
+}
+
+/* Profile information */
+.leadership-info {
+  flex: 1;
+  padding: 30px;
+  order: 2; /* On mobile, content comes after image */
+}
+
+.leadership-name {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.5px;
+}
+
+/* Add underline animation to names */
+.leadership-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0066, #6600ff);
+  transition: width 0.3s ease;
+}
+
+.leadership-profile:nth-child(3n+1) .leadership-name::after {
+  background: linear-gradient(90deg, #ff0066, #ff9a9e);
+}
+
+.leadership-profile:nth-child(3n+2) .leadership-name::after {
+  background: linear-gradient(90deg, #4A3AFF, #8e44ad);
+}
+
+.leadership-profile:nth-child(3n+3) .leadership-name::after {
+  background: linear-gradient(90deg, #33d9b2, #00c9a7);
+}
+
+.leadership-profile:hover .leadership-name::after {
+  width: 100%;
+}
+
+.leadership-position {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.leadership-profile:nth-child(3n+1) .leadership-position {
+  color: #ff0066;
+}
+
+.leadership-profile:nth-child(3n+2) .leadership-position {
+  color: #4A3AFF;
+}
+
+.leadership-profile:nth-child(3n+3) .leadership-position {
+  color: #33d9b2;
+}
+
+.leadership-bio {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .leadership-profiles-container {
+    padding: 30px;
+  }
+  
+  .leadership-profile {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .leadership-profile:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .leadership-image {
+    flex: 0 0 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .leadership-image img {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .leadership-info {
+    flex: 1;
+    padding: 40px;
+    order: unset;
+  }
+  
+  .leadership-name {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  
+  .leadership-position {
+    color: #ff0066;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .leadership-header {
+    padding: 40px 15px;
+  }
+  
+  .leadership-hero-banner {
+    height: 350px;
+  }
+  
+  .leadership-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .leadership-intro {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .leadership-profiles-container {
+    gap: 30px;
+    padding: 15px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-header {
+    padding: 30px 10px;
+  }
+  
+  .leadership-hero-banner {
+    height: 300px;
+  }
+  
+  .leadership-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .leadership-intro {
+    font-size: 0.9rem;
+  }
+  
+  .leadership-info {
+    padding: 20px;
+  }
+  
+  .leadership-name {
+    font-size: 20px;
+  }
+  
+  .leadership-position {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .leadership-bio {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .leadership-image {
+    max-height: 300px;
+  }
+  
+  .leadership-profiles-container {
+    gap: 25px;
+    padding: 10px;
+  }
+}
+
+/* Large Desktop Screens (1200px and up) */
+@media (min-width: 1200px) {
+  .leadership-main-title {
+    font-size: 3.5rem;
+  }
+  
+  .leadership-intro {
+    font-size: 1.3rem;
+    max-width: 800px;
+  }
+}
+
+/* Desktop Screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .leadership-main-title {
+    font-size: 3rem;
+  }
+  
+  .leadership-intro {
+    font-size: 1.2rem;
+    max-width: 750px;
+  }
+  
+  .leadership-profile {
+    width: calc(33.333% - 2rem);
+  }
+}
+
+/* Tablet Screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .leadership-header {
+    padding: 3rem 1rem;
+  }
+  
+  .leadership-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .leadership-intro {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  .leadership-profiles-container {
+    padding: 2rem;
+  }
+  
+  .leadership-profile {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+  }
+  
+  .leadership-info {
+    padding: 1.5rem;
+  }
+  
+  .leadership-name {
+    font-size: 1.4rem;
+  }
+  
+  .leadership-position {
+    font-size: 0.9rem;
+  }
+  
+  .leadership-bio {
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Mobile Screens (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .leadership-header {
+    padding: 2.5rem 1rem;
+  }
+  
+  .leadership-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .leadership-intro {
+    font-size: 1rem;
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+  
+  .leadership-profiles-container {
+    padding: 1.5rem;
+  }
+  
+  .leadership-profile {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .leadership-info {
+    padding: 1.2rem;
+  }
+  
+  .leadership-name {
+    font-size: 1.3rem;
+  }
+  
+  .leadership-position {
+    font-size: 0.85rem;
+  }
+  
+  .leadership-bio {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Screens (up to 575px) */
+@media (max-width: 575px) {
+  .leadership-header {
+    padding: 2rem 0.8rem;
+  }
+  
+  .leadership-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .leadership-intro {
+    font-size: 0.9rem;
+    padding: 0 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .leadership-profiles-container {
+    padding: 1rem;
+  }
+  
+  .leadership-profile {
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+  
+  .leadership-profile::before {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .leadership-info {
+    padding: 1rem;
+  }
+  
+  .leadership-name {
+    font-size: 1.2rem;
+  }
+  
+  .leadership-position {
+    font-size: 0.8rem;
+    margin: 0.3rem 0 0.6rem;
+  }
+  
+  .leadership-bio {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .leadership-image {
+    height: 200px;
+  }
+} 
