@@ -1,0 +1,40 @@
+.back-arrow {
+  position: fixed;
+  left: 20px;
+  top: 80px;
+  color: #0066cc;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.back-arrow:hover {
+  color: #0052a3;
+  transform: translateX(-5px);
+}
+
+.vapt-cloud-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vapt-cloud-container h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+} 
